@@ -1,9 +1,35 @@
 {
   "name": "just-dbs",
+  "description": "A site I'm making for a friend, I don't think you could get something interesting
+from it. :)",
   "version": "0.0.1",
+  "license": "GPLv3",
+  "licenses": [
+    {
+      "type": "GPLv3",
+      "url": "http://www.gnu.org/licenses/gpl-3.0.txt"
+    }
+  ],
+  "author": {
+    "name": "Jean-cédric THÉROND",
+    "email": "jean.cedric.t@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "Jean-cédric THÉROND",
+      "email": "jean.cedric.t@gmail.com"
+    }
+  ],
+  "contributors": [],
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
+  },
+  "bugs": "https://github.com/kane-thornwyrd/just-dbs/issues",
+  "homepage": "http://kane-thornwyrd.github.io/just-dbs/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kane-thornwyrd/just-dbs.git"
   },
   "dependencies": {
     "express": "~4.0.0",
@@ -12,7 +38,34 @@
     "cookie-parser": "~1.0.1",
     "body-parser": "~1.0.0",
     "debug": "~0.7.4",
-    "jade": "~1.3.0",
-    "stylus": "0.42.3"
+    "jade": "~1.3.0"
+  },
+  "devDependencies": {
+    "grunt-contrib-nodeunit": "~0.3.3",
+    "grunt": "~0.4.4",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-yuidoc": "~0.5.2",
+    "grunt-jsonlint": "~1.0.4",
+    "grunt-gh-pages": "~0.9.1",
+    "grunt-contrib-copy": "~0.5.0"
+  },
+  "engines": {
+    "node": ">= 0.11.11"
+  },
+  "directories": {
+    "clientsideSrc": "public-src",
+    "clientside": "public",
+    "doctheme": "yuidoc-themes/friendly-theme",
+    "doc": "doc",
+    "src": "src",
+    "lib": "lib"
+  },
+  "config": {
+    "banner": "/*\n * Just-DBS\n * https://github.com/kane-thornwyrd/just-dbs\n *\n * Copyright (c) 2014 Jean-cédric THÉROND\n * Licensed under the GPLv3 license.\n */",
+    "filetypes": {
+      "js": "**/*.js"
+    },
+    "jshintrc": ".jshintrc"
   }
 }

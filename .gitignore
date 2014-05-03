@@ -19,7 +19,15 @@ coverage
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
+#archives
+*.gz
+*.tar.gz
+*.tar.bz2
+
 # Dependency directory
 # Deployed apps should consider commenting this line out:
 # see https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
 node_modules
+
+#doc, should be generated each time.
+doc/**
