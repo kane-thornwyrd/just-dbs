@@ -1,0 +1,41 @@
+{
+    "project": {
+        "name": "just-dbs",
+        "description": "--",
+        "version": "0.0.1",
+        "url": "http://kane-thornwyrd.github.io/just-dbs/"
+    },
+    "files": {
+        "public-src/js/config.js": {
+            "name": "public-src/js/config.js",
+            "modules": {},
+            "classes": {
+                "Config": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {},
+    "classes": {
+        "Config": {
+            "name": "Config",
+            "shortname": "Config",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "file": "public-src/js/config.js",
+            "line": 4,
+            "description": "Config class.",
+            "is_constructor": 1,
+            "return": {
+                "description": "[description]",
+                "type": "[type]"
+            }
+        }
+    },
+    "classitems": [],
+    "warnings": []
+}
