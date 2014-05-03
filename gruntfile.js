@@ -96,6 +96,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', ['jsonlint','jshint:raw', 'jshint:refined', 'nodeunit']);
   grunt.registerTask('doc', ['yuidoc', 'gh-pages', 'copy:docplaceholder']);
-  grunt.registerTask('default', ['jsonlint', 'jshint:raw', 'doc', 'jshint:refined']);
+  grunt.registerTask('default', ['jsonlint', 'jshint:raw', 'jshint:refined']);
 
 };
