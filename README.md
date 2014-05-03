@@ -9,6 +9,9 @@ from it. :)
 [![Dependency Status](https://gemnasium.com/kane-thornwyrd/just-dbs.png)](https://gemnasium.com/kane-thornwyrd/just-dbs)
 [![Build Status](https://secure.travis-ci.org/kane-thornwyrd/just-dbs.png?branch=master)](http://travis-ci.org/kane-thornwyrd/just-dbs)
 
+## Technical Doc
+http://kane-thornwyrd.github.io/just-dbs/
+
 ## License
 Copyright © 2014 Jean-cédric THÉROND  
 Licensed under the GPLv3 license.
