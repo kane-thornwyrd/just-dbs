@@ -1,4 +1,4 @@
-# Just DBS
+Just DBS
 ========
 
 ## What is that ?
@@ -10,5 +10,5 @@ from it. :)
 [![Build Status](https://secure.travis-ci.org/kane-thornwyrd/just-dbs.png?branch=master)](http://travis-ci.org/kane-thornwyrd/just-dbs)
 
 ## License
-Copyright (c) 2014 Jean-cédric THÉROND  
+Copyright © 2014 Jean-cédric THÉROND  
 Licensed under the GPLv3 license.
