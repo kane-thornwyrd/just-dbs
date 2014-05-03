@@ -6,7 +6,7 @@ A site I'm making for a friend, I don't think you could get something interestin
 from it. :)
 
 ## Status/Badges
-*That are silly, prevent me to go check all single sites, and remind me personnal pages with "html W3C valid" on it…*
+*Those are silly, prevent me to go check all single sites, and remind me personnal pages with "xhtml1.1 W3C valid" on it…*
 
 [![Dependency Status](https://gemnasium.com/kane-thornwyrd/just-dbs.png)](https://gemnasium.com/kane-thornwyrd/just-dbs)
 
