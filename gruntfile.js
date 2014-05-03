@@ -54,6 +54,12 @@ module.exports = function(grunt) {
         options: {
           livereload: 9999,
         }
+      },
+      test: {
+        files: [
+          'test/**/*.js'
+        ],
+        tasks: ['test']
       }
     },
 
