@@ -1,8 +1,7 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/css/style.css')
+  include includes/header
   body
+    include includes/chromeframe
     block content
-    script(src='//localhost:9999/livereload.js')
+  include includes/footer
