@@ -1,11 +1,22 @@
 define('public/js/src/main',
   ['jquery', 'underscore', 'backbone'],
   function   ($, _, backbone) {
-
   'use strict';
 
-  $('a').css({color: 'red','font-size':'2em'});
-  console.log(_, backbone);
+  var Main = function Main(){
+    console.log('ok !');
+    console.log($('a'));
+    console.log( _.toArray($('a')) );
+    console.log(this);
+    console.log(backbone);
+  };
 
-  return function(){console.log('okokokokokok');};
+  Main.prototype = {
+    VERSION: '1.0.0',
+    NAME: 'just-dbs-client'
+
+  };
+
+
+  return new Main();
 });
