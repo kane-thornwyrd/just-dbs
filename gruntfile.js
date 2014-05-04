@@ -24,14 +24,7 @@ module.exports = function(grunt) {
             'package.json',
             'gruntfile.js',
             'routes/**/*.js',
-            'public-src/js/**/*.js'
-          ]
-        }
-      },
-      refined: {
-        files: {
-          src: [
-            'public/js/**/*.js'
+            'public/js/src/**/*.js'
           ]
         }
       }
@@ -42,15 +35,20 @@ module.exports = function(grunt) {
     },
 
     watch: {
-      dev: {
+      serverside: {
         files: [
           'package.json',
           '.jshintrc',
           'gruntfile.js',
-          'routes/**/*.js',
-          'public-src/js/**/*.js'
+          'routes/**/*.js'
         ],
-        tasks: ['default'],
+        tasks: ['default']
+      },
+      clientside: {
+        files: [
+          'public/js/src/**/*.js'
+        ],
+        tasks: ['default', 'requirejs:dev'],
         options: {
           livereload: 9999,
         }
@@ -60,6 +58,57 @@ module.exports = function(grunt) {
           'test/**/*.js'
         ],
         tasks: ['test']
+      }
+    },
+
+    requirejs: {
+      dist: {
+        options: {
+          baseUrl: '.',
+          mainConfigFile: 'public/js/src/config.js',
+          name: 'node_modules/almond/almond.js',
+          out: 'public/js/app.js',
+          include: ['public/js/src/main'],
+          insertRequire: ['public/js/src/main'],
+          wrap: true,
+          preserveLicenseComments: false,
+          done: function(done, output) {
+            // var duplicates = require('rjs-build-analysis').duplicates(output);
+
+            // if (duplicates.length > 0) {
+            //   grunt.log.subhead('Duplicates found in requirejs build:');
+            //   grunt.log.warn(duplicates);
+            //   done(new Error('r.js built duplicate modules, please check the excludes option.'));
+            // }
+            grunt.log.oklns(output);
+
+            done();
+          }
+        }
+      },
+      dev: {
+        options: {
+          baseUrl: '.',
+          mainConfigFile: 'public/js/src/config.js',
+          name: 'node_modules/almond/almond.js',
+          out: 'public/js/app.js',
+          include: ['public/js/src/main'],
+          insertRequire: ['public/js/src/main'],
+          wrap: true,
+          optimize: 'none',
+          done: function(done, output) {
+            // var duplicates = require('rjs-build-analysis').duplicates(output);
+
+            // if (duplicates.length > 0) {
+            //   grunt.log.subhead('Duplicates found in requirejs build:');
+            //   grunt.log.warn(duplicates);
+            //   done(new Error('r.js built duplicate modules, please check the excludes option.'));
+            // }
+            grunt.log.oklns(output);
+
+            done();
+          }
+        }
       }
     },
 
@@ -99,9 +148,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-yuidoc');
   grunt.loadNpmTasks('grunt-jsonlint');
   grunt.loadNpmTasks('grunt-gh-pages');
+  grunt.loadNpmTasks('grunt-contrib-requirejs');
 
-  grunt.registerTask('test', ['jsonlint','jshint:raw', 'jshint:refined', 'nodeunit']);
+  grunt.registerTask('test', ['jsonlint','jshint:raw', 'nodeunit']);
   grunt.registerTask('doc', ['yuidoc', 'gh-pages', 'copy:docplaceholder']);
-  grunt.registerTask('default', ['jsonlint', 'jshint:raw', 'jshint:refined']);
+  grunt.registerTask('default', ['jsonlint', 'jshint:raw']);
 
 };
