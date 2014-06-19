@@ -2,7 +2,7 @@
   'use strict';
 
   require.config({
-    baseUrl: 'public/js',
+    baseUrl: 'public/js/src',
     shim: {
       jquery: {
         exports: '$'
@@ -16,7 +16,8 @@
       }
     },
     paths: {
-      jquery: 'node_modules/jquery/dist/jquery.min',
+      app: 'public/js/src',
+      jquery: 'node_modules/jquery/dist/jquery',
       underscore: 'node_modules/underscore/underscore-min',
       backbone: 'node_modules/backbone/backbone-min'
     }

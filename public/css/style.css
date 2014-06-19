@@ -1,7 +1,21 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-a {
-  color: #00b7ff;
+/*
+ * Just-DBS
+ * https://github.com/kane-thornwyrd/just-dbs
+ *
+ * Copyright (c) 2014 Jean-cédric THÉROND
+ * Licensed under the GPLv3 license.
+ */
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+html,body{padding:0;margin:0}
+body{background:#ccc;color:#333}
+.test{background:url('public/img/ui-8c434.png') 0px 0px;width:16px;height:16px}
+.flash-messages{background-color:#424242;color:#aaa;opacity:.7;}
+.flash-messages .close{color:#7b7b7b;float:right;font-size:.7em;text-decoration:none}
+.flash-messages p{padding:0;margin:0}
+.flash-messages .flash-message{padding:5px 2em}
+.flash-messages .error{background-color:#630000}
+.flash-messages .info{background-color:#100062}
+.grid{margin:10px;}
+.grid article{width:100%;margin:5px;min-width:200px;min-height:320px;}
+@media all and (min-width: 640px){.grid article{width:320px;float:left}
 }

@@ -1,0 +1,35 @@
+{
+  "gallery": {
+    "has": {
+      "content": "photos",
+      "viewable": "userGroups"
+    }
+  },
+  "photo": {
+    "has": {
+      "contained": "galleries"
+    }
+  },
+  "userGroup": {
+    "has": {
+      "own": "users",
+      "view": "gallery"
+    }
+  },
+  "user": {
+    "has": {
+      "belong": "userGroup"
+    }
+  },
+  "log": {
+    "has": {
+      "culprit": "user",
+      "localisation": "view"
+    }
+  },
+  "view": {
+    "has": {
+      "displayed": "gallery"
+    }
+  }
+}

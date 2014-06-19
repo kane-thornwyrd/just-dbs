@@ -1,0 +1,3 @@
+.flash-messages
+  each messages in flash
+    p(class='flash-message #{messages.type}', type=messages.type)= messages.text

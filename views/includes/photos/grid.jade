@@ -1,0 +1,7 @@
+
+div(class=['grid', 'photos'] class=grid.classes)
+  each photo in photos
+    article(class=['photo', 'cell'] class=photo.classes)
+      h1= photo.title
+      each info in photo.infos
+        p #{info.name} : #{info.value}

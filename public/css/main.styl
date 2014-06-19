@@ -1,0 +1,47 @@
+no-excess()
+  padding 0
+  margin 0
+
+*
+  -webkit-box-sizing border-box /* Safari/Chrome, other WebKit */
+  -moz-box-sizing border-box    /* Firefox, other Gecko */
+  box-sizing border-box         /* Opera/IE 8+ */
+
+html, body
+  no-excess()
+
+body
+  background #ccc
+  color #333
+
+.test
+  sprite ui test-1
+
+.flash-messages
+  background-color #424242
+  color #aaa
+  opacity 0.7
+  .close
+    color #7B7B7B
+    float right
+    font-size 0.7em
+    text-decoration none
+  p
+    no-excess()
+  .flash-message
+    padding 5px 2em
+  .error
+    background-color #630000
+  .info
+    background-color #100062
+
+.grid
+  margin 10px
+  article
+    width 100%
+    margin 5px
+    min-width 200px
+    min-height 320px
+    @media all and (min-width: 640px)
+      width 320px
+      float left

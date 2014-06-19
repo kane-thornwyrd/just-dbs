@@ -1,0 +1,14 @@
+mixin if-ie(condition, showInNonIeBrowser)
+  - if(showInNonIeBrowser == null) showInNonIeBrowser = condition == "!IE";
+  != "<!--[if " + condition + "]>"
+  if showInNonIeBrowser
+    != "-->"
+  block
+  if showInNonIeBrowser
+    != "<!--"
+  != "<![endif]-->"
+
+mixin acceptable-browser()
+  | <!--[gt IE 9]><!-->
+  block
+  | <!--<![endif]-->

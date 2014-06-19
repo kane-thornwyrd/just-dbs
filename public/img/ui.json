@@ -1,0 +1,16 @@
+{
+  "name": "ui",
+  "checksum": "8c4345377c79b57112684098e2c23baa",
+  "shortsum": "8c434",
+  "images": [
+    {
+      "name": "test-1",
+      "filename": "test-1.png",
+      "checksum": "6ba665a0385e6fb63c0d154ecd5b586d",
+      "width": 16,
+      "height": 16,
+      "positionX": 0,
+      "positionY": 0
+    }
+  ]
+}

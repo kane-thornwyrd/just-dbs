@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  .desc
+    p= description
+  h2 Ajout d'images
+  form(action="/photos" enctype="multipart/form-data" method="post")
+    input(type="text" name="title")
+    input(type="file" name="upload" multiple="multiple")
+    input(type="submit" value="Upload")
+  include includes/photos/grid
